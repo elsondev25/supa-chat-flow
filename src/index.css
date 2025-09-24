@@ -8,89 +8,137 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Modern chat app color palette */
+    --background: 218 23% 97%;
+    --foreground: 218 27% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 218 27% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 218 27% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary blues for chat interface */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 217 91% 55%;
+    --primary-light: 217 91% 85%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary grays */
+    --secondary: 218 15% 95%;
+    --secondary-foreground: 218 27% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted backgrounds */
+    --muted: 218 15% 96%;
+    --muted-foreground: 218 16% 46%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent colors */
+    --accent: 142 76% 45%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 218 20% 90%;
+    --input: 218 20% 94%;
+    --ring: 217 91% 60%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Chat-specific colors */
+    --chat-bubble-own: 217 91% 60%;
+    --chat-bubble-own-foreground: 0 0% 100%;
+    --chat-bubble-other: 0 0% 100%;
+    --chat-bubble-other-foreground: 218 27% 15%;
+    
+    /* Status colors */
+    --online: 142 76% 45%;
+    --away: 45 93% 47%;
+    --offline: 218 16% 70%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Glass morphism */
+    --glass-bg: 0 0% 100% / 0.8;
+    --glass-border: 218 20% 90% / 0.5;
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Shadows and effects */
+    --shadow-soft: 0 2px 8px hsl(218 27% 15% / 0.08);
+    --shadow-medium: 0 4px 16px hsl(218 27% 15% / 0.12);
+    --shadow-strong: 0 8px 32px hsl(218 27% 15% / 0.16);
 
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar specific */
+    --sidebar-background: 218 25% 98%;
+    --sidebar-foreground: 218 27% 25%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 218 15% 96%;
+    --sidebar-accent-foreground: 218 27% 25%;
+    --sidebar-border: 218 20% 92%;
+    --sidebar-ring: 217 91% 60%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark mode for chat app */
+    --background: 218 27% 8%;
+    --foreground: 218 15% 92%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 218 27% 12%;
+    --card-foreground: 218 15% 92%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 218 27% 12%;
+    --popover-foreground: 218 15% 92%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    /* Primary blues in dark mode */
+    --primary: 217 91% 65%;
+    --primary-foreground: 218 27% 8%;
+    --primary-hover: 217 91% 70%;
+    --primary-light: 217 91% 25%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    /* Dark secondary */
+    --secondary: 218 27% 15%;
+    --secondary-foreground: 218 15% 85%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 218 27% 12%;
+    --muted-foreground: 218 15% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 142 76% 50%;
+    --accent-foreground: 218 27% 8%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 218 27% 8%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 218 27% 18%;
+    --input: 218 27% 15%;
+    --ring: 217 91% 65%;
+
+    /* Chat bubbles dark mode */
+    --chat-bubble-own: 217 91% 65%;
+    --chat-bubble-own-foreground: 218 27% 8%;
+    --chat-bubble-other: 218 27% 15%;
+    --chat-bubble-other-foreground: 218 15% 92%;
+
+    /* Status colors dark */
+    --online: 142 76% 50%;
+    --away: 45 93% 52%;
+    --offline: 218 15% 50%;
+
+    /* Glass morphism dark */
+    --glass-bg: 218 27% 12% / 0.8;
+    --glass-border: 218 27% 18% / 0.5;
+
+    /* Dark shadows */
+    --shadow-soft: 0 2px 8px hsl(218 27% 5% / 0.3);
+    --shadow-medium: 0 4px 16px hsl(218 27% 5% / 0.4);
+    --shadow-strong: 0 8px 32px hsl(218 27% 5% / 0.5);
+
+    /* Sidebar dark */
+    --sidebar-background: 218 27% 10%;
+    --sidebar-foreground: 218 15% 85%;
+    --sidebar-primary: 217 91% 65%;
+    --sidebar-primary-foreground: 218 27% 8%;
+    --sidebar-accent: 218 27% 15%;
+    --sidebar-accent-foreground: 218 15% 85%;
+    --sidebar-border: 218 27% 18%;
+    --sidebar-ring: 217 91% 65%;
   }
 }
 
